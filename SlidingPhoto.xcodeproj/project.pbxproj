@@ -14,10 +14,11 @@
 		FA62D2BD27D370D400450A24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA62D2BC27D370D400450A24 /* Assets.xcassets */; };
 		FA62D2C027D370D400450A24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA62D2BE27D370D400450A24 /* LaunchScreen.storyboard */; };
 		FA62D2C827D3711800450A24 /* ImageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62D2C727D3711800450A24 /* ImageHandler.swift */; };
+		FA62D2CA27D386BB00450A24 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62D2C927D386BB00450A24 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FA62D2B027D370D300450A24 /* SlidingTiles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlidingTiles.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA62D2B027D370D300450A24 /* SlidingPhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlidingPhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA62D2B327D370D300450A24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA62D2B527D370D300450A24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FA62D2B727D370D300450A24 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +27,7 @@
 		FA62D2BF27D370D400450A24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA62D2C127D370D400450A24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA62D2C727D3711800450A24 /* ImageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHandler.swift; sourceTree = "<group>"; };
+		FA62D2C927D386BB00450A24 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +44,7 @@
 		FA62D2A727D370D300450A24 = {
 			isa = PBXGroup;
 			children = (
-				FA62D2B227D370D300450A24 /* SlidingTiles */,
+				FA62D2B227D370D300450A24 /* SlidingPhoto */,
 				FA62D2B127D370D300450A24 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,32 +52,33 @@
 		FA62D2B127D370D300450A24 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FA62D2B027D370D300450A24 /* SlidingTiles.app */,
+				FA62D2B027D370D300450A24 /* SlidingPhoto.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FA62D2B227D370D300450A24 /* SlidingTiles */ = {
+		FA62D2B227D370D300450A24 /* SlidingPhoto */ = {
 			isa = PBXGroup;
 			children = (
 				FA62D2B327D370D300450A24 /* AppDelegate.swift */,
 				FA62D2B527D370D300450A24 /* SceneDelegate.swift */,
 				FA62D2B727D370D300450A24 /* ViewController.swift */,
+				FA62D2C927D386BB00450A24 /* SecondViewController.swift */,
 				FA62D2C727D3711800450A24 /* ImageHandler.swift */,
 				FA62D2B927D370D300450A24 /* Main.storyboard */,
 				FA62D2BC27D370D400450A24 /* Assets.xcassets */,
 				FA62D2BE27D370D400450A24 /* LaunchScreen.storyboard */,
 				FA62D2C127D370D400450A24 /* Info.plist */,
 			);
-			path = SlidingTiles;
+			path = SlidingPhoto;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FA62D2AF27D370D300450A24 /* SlidingTiles */ = {
+		FA62D2AF27D370D300450A24 /* SlidingPhoto */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FA62D2C427D370D400450A24 /* Build configuration list for PBXNativeTarget "SlidingTiles" */;
+			buildConfigurationList = FA62D2C427D370D400450A24 /* Build configuration list for PBXNativeTarget "SlidingPhoto" */;
 			buildPhases = (
 				FA62D2AC27D370D300450A24 /* Sources */,
 				FA62D2AD27D370D300450A24 /* Frameworks */,
@@ -85,9 +88,9 @@
 			);
 			dependencies = (
 			);
-			name = SlidingTiles;
+			name = SlidingPhoto;
 			productName = SlidingTiles;
-			productReference = FA62D2B027D370D300450A24 /* SlidingTiles.app */;
+			productReference = FA62D2B027D370D300450A24 /* SlidingPhoto.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -105,7 +108,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FA62D2AB27D370D300450A24 /* Build configuration list for PBXProject "SlidingTiles" */;
+			buildConfigurationList = FA62D2AB27D370D300450A24 /* Build configuration list for PBXProject "SlidingPhoto" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -118,7 +121,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FA62D2AF27D370D300450A24 /* SlidingTiles */,
+				FA62D2AF27D370D300450A24 /* SlidingPhoto */,
 			);
 		};
 /* End PBXProject section */
@@ -144,6 +147,7 @@
 				FA62D2B827D370D300450A24 /* ViewController.swift in Sources */,
 				FA62D2B427D370D300450A24 /* AppDelegate.swift in Sources */,
 				FA62D2C827D3711800450A24 /* ImageHandler.swift in Sources */,
+				FA62D2CA27D386BB00450A24 /* SecondViewController.swift in Sources */,
 				FA62D2B627D370D300450A24 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,7 +299,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2QP7278ZNB;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SlidingTiles/Info.plist;
+				INFOPLIST_FILE = SlidingPhoto/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -307,7 +311,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Alex-John.SlidingTiles";
+				PRODUCT_BUNDLE_IDENTIFIER = "Alex-John.SlidingPhoto";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -324,7 +328,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2QP7278ZNB;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SlidingTiles/Info.plist;
+				INFOPLIST_FILE = SlidingPhoto/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -336,7 +340,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Alex-John.SlidingTiles";
+				PRODUCT_BUNDLE_IDENTIFIER = "Alex-John.SlidingPhoto";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -347,7 +351,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FA62D2AB27D370D300450A24 /* Build configuration list for PBXProject "SlidingTiles" */ = {
+		FA62D2AB27D370D300450A24 /* Build configuration list for PBXProject "SlidingPhoto" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA62D2C227D370D400450A24 /* Debug */,
@@ -356,7 +360,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FA62D2C427D370D400450A24 /* Build configuration list for PBXNativeTarget "SlidingTiles" */ = {
+		FA62D2C427D370D400450A24 /* Build configuration list for PBXNativeTarget "SlidingPhoto" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA62D2C527D370D400450A24 /* Debug */,

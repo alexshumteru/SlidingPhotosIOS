@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var confirmBtn: UIButton!
     
+    var imageHandler: ImageHandler!
+    
     //var image: UIImage
     
     override func viewDidLoad() {
@@ -28,26 +30,23 @@ class ViewController: UIViewController {
         vc.delegate = self
         vc.allowsEditing = true
         present(vc, animated: true)
-        var image: UIImage
-        var imageHandler : ImageHandler
-        var fourByFour : [[UIImage]]
-        if imageView.image != nil{
-            image = imageView.image!
-            imageHandler = ImageHandler(userImage: image)!
-            fourByFour = imageHandler.splitImage(row: 4, column: 4)
-            print(image)
-            print(fourByFour[0][0])
-            print(fourByFour[3][3])
-        }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! SecondViewController
+        destinationVC.imageHandler = self.imageHandler
+    }
     
     @IBAction func confirmPhoto(_ sender: Any) {
         if imageView.image != nil{
+            var image: UIImage
+            image = imageView.image!
+            self.imageHandler = ImageHandler(userImage: image)!
+            print(self.imageHandler.image)
             self.performSegue(withIdentifier: "Segue1", sender: self)
         }
     }
-    
+
 }
 
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
