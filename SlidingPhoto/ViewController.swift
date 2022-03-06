@@ -42,7 +42,6 @@ class ViewController: UIViewController {
             var image: UIImage
             image = imageView.image!
             self.imageHandler = ImageHandler(userImage: image)!
-            print(self.imageHandler.image)
             self.performSegue(withIdentifier: "Segue1", sender: self)
         }
     }

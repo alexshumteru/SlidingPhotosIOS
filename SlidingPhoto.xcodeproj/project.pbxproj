@@ -15,6 +15,9 @@
 		FA62D2C027D370D400450A24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA62D2BE27D370D400450A24 /* LaunchScreen.storyboard */; };
 		FA62D2C827D3711800450A24 /* ImageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62D2C727D3711800450A24 /* ImageHandler.swift */; };
 		FA62D2CA27D386BB00450A24 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62D2C927D386BB00450A24 /* SecondViewController.swift */; };
+		FA62D2CC27D446D900450A24 /* EasyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62D2CB27D446D900450A24 /* EasyViewController.swift */; };
+		FA62D2CE27D446F200450A24 /* MedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62D2CD27D446F200450A24 /* MedViewController.swift */; };
+		FA62D2D027D4470400450A24 /* HardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62D2CF27D4470400450A24 /* HardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		FA62D2C127D370D400450A24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA62D2C727D3711800450A24 /* ImageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHandler.swift; sourceTree = "<group>"; };
 		FA62D2C927D386BB00450A24 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		FA62D2CB27D446D900450A24 /* EasyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyViewController.swift; sourceTree = "<group>"; };
+		FA62D2CD27D446F200450A24 /* MedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedViewController.swift; sourceTree = "<group>"; };
+		FA62D2CF27D4470400450A24 /* HardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,9 @@
 				FA62D2B527D370D300450A24 /* SceneDelegate.swift */,
 				FA62D2B727D370D300450A24 /* ViewController.swift */,
 				FA62D2C927D386BB00450A24 /* SecondViewController.swift */,
+				FA62D2CB27D446D900450A24 /* EasyViewController.swift */,
+				FA62D2CD27D446F200450A24 /* MedViewController.swift */,
+				FA62D2CF27D4470400450A24 /* HardViewController.swift */,
 				FA62D2C727D3711800450A24 /* ImageHandler.swift */,
 				FA62D2B927D370D300450A24 /* Main.storyboard */,
 				FA62D2BC27D370D400450A24 /* Assets.xcassets */,
@@ -145,10 +154,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA62D2B827D370D300450A24 /* ViewController.swift in Sources */,
+				FA62D2D027D4470400450A24 /* HardViewController.swift in Sources */,
 				FA62D2B427D370D300450A24 /* AppDelegate.swift in Sources */,
+				FA62D2CC27D446D900450A24 /* EasyViewController.swift in Sources */,
 				FA62D2C827D3711800450A24 /* ImageHandler.swift in Sources */,
 				FA62D2CA27D386BB00450A24 /* SecondViewController.swift in Sources */,
 				FA62D2B627D370D300450A24 /* SceneDelegate.swift in Sources */,
+				FA62D2CE27D446F200450A24 /* MedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
