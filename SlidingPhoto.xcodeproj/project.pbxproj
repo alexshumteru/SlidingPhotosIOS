@@ -20,6 +20,7 @@
 		FA62D2CC27D446D900450A24 /* EasyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62D2CB27D446D900450A24 /* EasyViewController.swift */; };
 		FA62D2CE27D446F200450A24 /* MedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62D2CD27D446F200450A24 /* MedViewController.swift */; };
 		FA62D2D027D4470400450A24 /* HardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62D2CF27D4470400450A24 /* HardViewController.swift */; };
+		FA62D2D227E2E1C800450A24 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FA62D2D127E2E1C800450A24 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		FA62D2CB27D446D900450A24 /* EasyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyViewController.swift; sourceTree = "<group>"; };
 		FA62D2CD27D446F200450A24 /* MedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedViewController.swift; sourceTree = "<group>"; };
 		FA62D2CF27D4470400450A24 /* HardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardViewController.swift; sourceTree = "<group>"; };
+		FA62D2D127E2E1C800450A24 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		FA62D2A727D370D300450A24 = {
 			isa = PBXGroup;
 			children = (
+				FA62D2D127E2E1C800450A24 /* .gitignore */,
 				FA62D2B227D370D300450A24 /* SlidingPhoto */,
 				FA62D2B127D370D300450A24 /* Products */,
 			);
@@ -146,6 +149,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA62D2D227E2E1C800450A24 /* .gitignore in Resources */,
 				FA62D2C027D370D400450A24 /* LaunchScreen.storyboard in Resources */,
 				FA62D2BD27D370D400450A24 /* Assets.xcassets in Resources */,
 				FA62D2BB27D370D300450A24 /* Main.storyboard in Resources */,

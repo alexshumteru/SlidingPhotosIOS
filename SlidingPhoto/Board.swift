@@ -7,14 +7,25 @@
 
 import Foundation
 
-class EasyBoard(dimension) {
+class Board {
     
-    var Easy : [[Int]] = [
-        [1, 2, 3],
-        [4, 5, 6],
-        [7, 8, 0] // 0 => empty
-    ]
-
-    let rows = 3
-    let cols = 3
+    var rows : Int;
+    var cols : Int;
+    var board : [[Int]]
+    
+    init(dim : Int){
+        
+        self.rows = dim;
+        self.cols = dim;
+        
+        self.board = []
+        for y in 0..<self.rows{
+            self.board.append([Int]())
+            for x in 0..<self.cols{
+                self.board[y].append(self.cols * y + x);
+                
+            }
+        }
+        
+    }
 }
