@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52901E4A27E2B7B4001F39F0 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52901E4927E2B7B4001F39F0 /* BoardView.swift */; };
+		52901E5227E2D737001F39F0 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52901E5127E2D737001F39F0 /* Board.swift */; };
 		FA62D2B427D370D300450A24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62D2B327D370D300450A24 /* AppDelegate.swift */; };
 		FA62D2B627D370D300450A24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62D2B527D370D300450A24 /* SceneDelegate.swift */; };
 		FA62D2B827D370D300450A24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62D2B727D370D300450A24 /* ViewController.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52901E4927E2B7B4001F39F0 /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
+		52901E5127E2D737001F39F0 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		FA62D2B027D370D300450A24 /* SlidingPhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlidingPhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA62D2B327D370D300450A24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA62D2B527D370D300450A24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 				FA62D2BC27D370D400450A24 /* Assets.xcassets */,
 				FA62D2BE27D370D400450A24 /* LaunchScreen.storyboard */,
 				FA62D2C127D370D400450A24 /* Info.plist */,
+				52901E4927E2B7B4001F39F0 /* BoardView.swift */,
+				52901E5127E2D737001F39F0 /* Board.swift */,
 			);
 			path = SlidingPhoto;
 			sourceTree = "<group>";
@@ -158,8 +164,10 @@
 				FA62D2B427D370D300450A24 /* AppDelegate.swift in Sources */,
 				FA62D2CC27D446D900450A24 /* EasyViewController.swift in Sources */,
 				FA62D2C827D3711800450A24 /* ImageHandler.swift in Sources */,
+				52901E5227E2D737001F39F0 /* Board.swift in Sources */,
 				FA62D2CA27D386BB00450A24 /* SecondViewController.swift in Sources */,
 				FA62D2B627D370D300450A24 /* SceneDelegate.swift in Sources */,
+				52901E4A27E2B7B4001F39F0 /* BoardView.swift in Sources */,
 				FA62D2CE27D446F200450A24 /* MedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
