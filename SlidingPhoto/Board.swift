@@ -12,11 +12,14 @@ class Board {
     var rows : Int;
     var cols : Int;
     var boardState : [[Int]]
+    var empty : Int;
     
     init(dim : Int){
         
         self.rows = dim;
         self.cols = dim;
+        empty = self.rows * self.cols
+
         
         self.boardState = []
         for y in 0..<self.rows{
@@ -34,7 +37,8 @@ class Board {
     
     func swapTiles(fromRow r1: Int, fromCol c1: Int, toRow r2: Int, toCol c2: Int) {
         boardState[r2][c2] = boardState[r1][c1]
-        boardState[r1][c1] = 16
+        boardState[r1][c1] = empty
+        print("boardState:", boardState)
     }
     
     func slideTile(atRow r: Int, atCol c: Int) {
@@ -70,17 +74,17 @@ class Board {
         if (r > self.rows || c > self.cols || r < 0 || c < 0) {
             return "NA"
         }
-        if (r >= 1) && ( boardState[r-1][c] == 16 ) {
+        if (r >= 1) && ( boardState[r-1][c] == empty ) {
             return "UP"
         }
-        if (r <= self.rows - 2 && boardState[r+1][c] == 16) {
+        if (r <= self.rows - 2 && boardState[r+1][c] == empty) {
             return "DOWN"
         }
-        if (c >= 1 && boardState[r][c-1] == 16) {
+        if (c >= 1 && boardState[r][c-1] == empty) {
             return "LEFT"
         }
-        if (c <= (self.cols - 2) && boardState[r][c+1] == 16 ) {
-            return "Right"
+        if (c <= (self.cols - 2) && boardState[r][c+1] == empty ) {
+            return "RIGHT"
         }
         return "NA"
     }

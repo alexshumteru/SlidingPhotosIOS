@@ -39,31 +39,37 @@ class BoardView: UIView {
         var board: Board?
         var tileSize: CGFloat?
         var boardSquare: CGRect?
+        var dimension : Int?
         // determine region to hold tiles (see below)
         if (self.tag == 103) {
             boardSquare = boardRect(dimInt: 3, dimFloat: 3.0)
             board = appDelegate.easyBoard
             tileSize = (boardSquare!.width) / 3.0
+            dimension = 3
 
         }
         else if (self.tag == 104) {
             boardSquare = boardRect(dimInt: 4, dimFloat: 4.0)
             board = appDelegate.midBoard
             tileSize = (boardSquare!.width) / 4.0
+            dimension = 4
         }
         else if (self.tag == 105) {
             boardSquare = boardRect(dimInt: 5, dimFloat: 5.0)
             board = appDelegate.hardBoard
             tileSize = (boardSquare!.width) / 5.0
+            dimension = 5
 
         }
+        print("dimInt:", dimension!)
+        print("board.boardState", board!.boardState)
         let tileBounds = CGRect(x: 0, y: 0, width: tileSize!, height: tileSize!)
         
-        for r in 0 ..< 4 {
-            for c in 0 ..< 4 {
+        for r in 0 ..< dimension! {
+            for c in 0 ..< dimension! {
                 
                 let tile = board!.getTile(atRow: r, atCol: c)
-                if tile != 16 {
+                if tile != (dimension! * dimension!) {
                     let button = self.viewWithTag(tile) as! UIButton
                     button.setTitle(String(tile), for: UIControl.State.normal)
                     button.bounds = tileBounds

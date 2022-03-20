@@ -22,7 +22,6 @@ class MedViewController: UIViewController {
         var buttonCenter = sender.center
         var slide = true
         let resPos = board!.possibleSlidePosition(atRow: pos!.row, atCol: pos!.column)
-        print(resPos)
         if resPos == "UP" {
             buttonCenter.y -= buttonBounds.size.height
         } else if resPos == "DOWN" {
