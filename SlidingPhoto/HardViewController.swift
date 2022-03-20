@@ -16,6 +16,4 @@ class HardViewController: UIViewController {
         print(images!.count, images![0].count)
         // Do any additional setup after loading the view.
     }
-    
-
 }

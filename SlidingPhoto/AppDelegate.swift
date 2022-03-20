@@ -9,11 +9,18 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    var easyBoard: Board?
+    var midBoard : Board? // Since both the Board View and the View Controller will want access to this object, let the AppDelegate object own it
+    var hardBoard: Board?
 
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        self.easyBoard = Board(dim: 3)
+        self.midBoard = Board(dim: 4)
+        self.hardBoard = Board(dim: 5)
+
         return true
     }
 
