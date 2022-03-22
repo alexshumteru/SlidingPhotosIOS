@@ -31,14 +31,48 @@ class Board {
         }
     }
     
-    func scramble() {
-        
+    func findEmpty() -> [Int]{
+        for i in 0 ..< self.rows {
+            for j in 0 ..< self.cols {
+                if (boardState[i][j] == empty) {
+                    return [i,j]
+                }
+            }
+        }
+        return [-1, -1] // Indicates something wrong with the board.
+    }
+    
+    func canSlide(atRow r: Int, atCol c: Int) -> Bool {
+        if (r > self.rows || c > self.cols || r < 0 || c < 0) {
+            return false
+        }
+        print("r:", r)
+        print("c:", c)
+        return (r >= 0 && c >= 0 && r <= self.rows - 1 && c <= self.cols - 1)
+                && ((r >= 1 && boardState[r-1][c] == empty) ||
+               (r <= self.rows - 2 && boardState[r+1][c] == empty) ||
+               (c >= 1 && boardState[r][c-1] == empty) ||
+                (c <= (self.cols - 2)  && boardState[r][c+1] == empty ))
+    }
+    
+    func scramble(numSwap n: Int) {
+        // 0 - left, 1 - right, 2 - up, 3 - down
+        let possibleMoves = [[-1,0], [1,0], [0,-1], [0,1]]
+        var emptyTile = findEmpty()
+        for _ in 1 ..< n {
+            let tmp: Int = Int.random(in: 0...3)
+            if canSlide(atRow: emptyTile[0] + possibleMoves[tmp][0], atCol: emptyTile[1] + possibleMoves[tmp][1]) {
+                swapTiles(fromRow: emptyTile[0] + possibleMoves[tmp][0],
+                          fromCol: emptyTile[1] + possibleMoves[tmp][1],
+                          toRow: emptyTile[0], toCol: emptyTile[1])
+                emptyTile = [emptyTile[0] + possibleMoves[tmp][0], emptyTile[1] + possibleMoves[tmp][1]]
+            }
+        }
     }
     
     func swapTiles(fromRow r1: Int, fromCol c1: Int, toRow r2: Int, toCol c2: Int) {
         boardState[r2][c2] = boardState[r1][c1]
         boardState[r1][c1] = empty
-        print("boardState:", boardState)
     }
     
     func slideTile(atRow r: Int, atCol c: Int) {

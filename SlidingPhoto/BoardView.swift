@@ -61,8 +61,7 @@ class BoardView: UIView {
             dimension = 5
 
         }
-        print("dimInt:", dimension!)
-        print("board.boardState", board!.boardState)
+        
         let tileBounds = CGRect(x: 0, y: 0, width: tileSize!, height: tileSize!)
         
         for r in 0 ..< dimension! {
