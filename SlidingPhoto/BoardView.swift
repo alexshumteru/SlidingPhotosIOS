@@ -9,12 +9,21 @@ import UIKit
 
 class BoardView: UIView {
 
+    var images: [[UIImage]]?
+    var dimension: Int?
+    var board: Board?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
     }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+    
+    func passInImages(images: [[UIImage]]){
+        self.images = images
     }
     
     func boardRect(dimInt : Int, dimFloat : CGFloat) -> CGRect { // get square for holding 4x4 tiles buttons
@@ -36,47 +45,66 @@ class BoardView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         let appDelegate = UIApplication.shared.delegate! as! AppDelegate
-        var board: Board?
         var tileSize: CGFloat?
         var boardSquare: CGRect?
-        var dimension : Int?
         // determine region to hold tiles (see below)
         if (self.tag == 103) {
             boardSquare = boardRect(dimInt: 3, dimFloat: 3.0)
-            board = appDelegate.easyBoard
+            self.board = appDelegate.easyBoard
             tileSize = (boardSquare!.width) / 3.0
-            dimension = 3
+            self.dimension = 3
 
         }
         else if (self.tag == 104) {
             boardSquare = boardRect(dimInt: 4, dimFloat: 4.0)
-            board = appDelegate.midBoard
+            self.board = appDelegate.midBoard
             tileSize = (boardSquare!.width) / 4.0
-            dimension = 4
+            self.dimension = 4
         }
         else if (self.tag == 105) {
             boardSquare = boardRect(dimInt: 5, dimFloat: 5.0)
-            board = appDelegate.hardBoard
+            self.board = appDelegate.hardBoard
             tileSize = (boardSquare!.width) / 5.0
-            dimension = 5
+            self.dimension = 5
 
         }
         
         let tileBounds = CGRect(x: 0, y: 0, width: tileSize!, height: tileSize!)
         
-        for r in 0 ..< dimension! {
-            for c in 0 ..< dimension! {
+        for r in 0 ..< self.dimension! {
+            for c in 0 ..< self.dimension! {
                 
                 let tile = board!.getTile(atRow: r, atCol: c)
-                if tile != (dimension! * dimension!) {
+                if tile != (self.dimension! * self.dimension!) {
                     let button = self.viewWithTag(tile) as! UIButton
                     button.setTitle(String(tile), for: UIControl.State.normal)
                     button.bounds = tileBounds
                     button.center = CGPoint(x: (CGFloat(c) + 0.5) * tileSize!,
                                             y: (CGFloat(r) + 0.5) * tileSize!)
+                    button.setImage(self.resizeImage(image: images![r][c], targetHeight: 120.0, targetWidth: 120.0), for: [])
                 }
             }
         }
+    }
+    
+    fileprivate func resizeImage(image: UIImage, targetHeight: CGFloat, targetWidth: CGFloat) -> UIImage {
+        // Get current image size
+        let size = image.size
+
+        // Compute scaled, new size
+        let heightRatio = targetHeight / size.height
+        let widthRatio = targetWidth / size.width
+        let newSize = CGSize(width: size.width * widthRatio, height: size.height * heightRatio)
+        let rect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height)
+
+        // Create new image
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 0)
+        image.draw(in: rect)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+
+        // Return new image
+        return newImage!
     }
     
 }

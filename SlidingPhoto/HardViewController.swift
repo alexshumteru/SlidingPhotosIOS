@@ -13,6 +13,7 @@ class HardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        boardView.passInImages(images: self.images!)
         print(images!.count, images![0].count)
         // Do any additional setup after loading the view.
     }

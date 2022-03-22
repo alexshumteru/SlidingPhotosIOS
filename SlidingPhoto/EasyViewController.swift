@@ -50,6 +50,8 @@ class EasyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        boardView.passInImages(images: self.images!)
+        //boardView.setupImages()
         print(images!.count, images![0].count)
         
         // Do any additional setup after loading the view.
