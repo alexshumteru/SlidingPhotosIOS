@@ -77,11 +77,20 @@ class BoardView: UIView {
                 let tile = board!.getTile(atRow: r, atCol: c)
                 if tile != (self.dimension! * self.dimension!) {
                     let button = self.viewWithTag(tile) as! UIButton
-                    button.setTitle(String(tile), for: UIControl.State.normal)
+                    button.setTitle(String(""), for: UIControl.State.normal)
                     button.bounds = tileBounds
                     button.center = CGPoint(x: (CGFloat(c) + 0.5) * tileSize!,
                                             y: (CGFloat(r) + 0.5) * tileSize!)
-                    button.setImage(self.resizeImage(image: images![r][c], targetHeight: 120.0, targetWidth: 120.0), for: [])
+                    let x = (tile - 1) % self.dimension!
+                    let y = (tile - 1) / self.dimension!
+                    print(images!.count, images![0].count)
+                    if (self.tag == 103){
+                        button.setImage(self.resizeImage(image: images![y][x], targetHeight: 128.0, targetWidth: 128.0), for: [])
+                    } else if (self.tag == 104){
+                        button.setImage(self.resizeImage(image: images![y][x], targetHeight: 96.0, targetWidth: 96.0), for: [])
+                    } else if (self.tag == 105){
+                        button.setImage(self.resizeImage(image: images![y][x], targetHeight: 76.0, targetWidth: 76.0), for: [])
+                    }
                 }
             }
         }
