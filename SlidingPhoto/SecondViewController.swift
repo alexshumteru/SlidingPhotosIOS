@@ -16,8 +16,6 @@ class SecondViewController: UIViewController {
     }
     
     @IBAction func easyBtn(_ sender: Any) {
-
-
         self.performSegue(withIdentifier: "ToEasy", sender: self)
     }
 

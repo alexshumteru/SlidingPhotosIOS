@@ -15,10 +15,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nl6-FR-zoh">
-                                <rect key="frame" x="90" y="174" width="240" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOA-WS-vt3">
                                 <rect key="frame" x="124" y="617" width="172" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -37,10 +33,15 @@
                                     <action selector="confirmPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cyM-0x-YoK"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nl6-FR-zoh">
+                                <rect key="frame" x="0.0" y="94" width="390" height="390"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" id="6dR-fv-DD1"/>
                     <connections>
                         <outlet property="imageView" destination="Nl6-FR-zoh" id="d9z-V9-BT3"/>
                         <segue destination="tFc-y8-p0Y" kind="presentation" identifier="Segue1" modalPresentationStyle="fullScreen" id="An7-Xu-qfs"/>
@@ -48,7 +49,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="94.419642857142847"/>
+            <point key="canvasLocation" x="18.46153846153846" y="93.838862559241704"/>
         </scene>
         <!--Easy View Controller-->
         <scene sceneID="1Ty-8Q-M9b">
@@ -59,7 +60,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view tag="103" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xMg-wo-p7j" customClass="BoardView" customModule="SlidingPhoto" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="133" width="390" height="422"/>
+                                <rect key="frame" x="0.0" y="134" width="390" height="422"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xdc-ap-hgd">
@@ -137,12 +138,28 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSn-Rq-A7P">
+                                <rect key="frame" x="34" y="44" width="96" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Undo"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ge-fx-3aW">
+                                <rect key="frame" x="218" y="44" width="136" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="To Homepage"/>
+                                <connections>
+                                    <action selector="toHome:" destination="JIj-08-eOj" eventType="touchUpInside" id="Rri-VJ-W7G"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CQS-2N-L6d"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
                         <outlet property="boardView" destination="xMg-wo-p7j" id="Syv-ai-5wn"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toHomeEasy" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="uVD-U4-8D5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y2I-Bc-prb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -154,11 +171,11 @@
             <objects>
                 <viewController storyboardIdentifier="MedBoard" id="IV0-UT-Ntn" customClass="MedViewController" customModule="SlidingPhoto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W1T-BU-Yau">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view tag="104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fny-aG-4nP" customClass="BoardView" customModule="SlidingPhoto" customModuleProvider="target">
-                                <rect key="frame" x="8" y="124" width="390" height="422"/>
+                                <rect key="frame" x="0.0" y="134" width="390" height="422"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZgT-g0-OqO">
@@ -299,17 +316,35 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8C-gc-766">
+                                <rect key="frame" x="224" y="44" width="136" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="To Homepage"/>
+                                <connections>
+                                    <action selector="toHome:" destination="IV0-UT-Ntn" eventType="touchUpInside" id="Mpp-WR-JAe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzn-CK-O6l">
+                                <rect key="frame" x="36" y="44" width="96" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Undo"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GOg-wR-Kna"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" id="OyZ-sL-NAi"/>
+                    <value key="contentSizeForViewInPopover" type="size" width="390" height="844"/>
                     <connections>
                         <outlet property="boardView" destination="Fny-aG-4nP" id="1eD-U3-MEh"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toHomeMed" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="3E9-oB-ea3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EgJ-kb-2g5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="963.07692307692309" y="1096.9194312796208"/>
+            <point key="canvasLocation" x="911" y="1129"/>
         </scene>
         <!--Hard View Controller-->
         <scene sceneID="v4J-TT-5zl">
@@ -320,7 +355,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view tag="105" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vdk-HA-KRa" customClass="BoardView" customModule="SlidingPhoto" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="192" width="390" height="422"/>
+                                <rect key="frame" x="0.0" y="134" width="390" height="422"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHv-Eh-0Gs">
@@ -544,17 +579,33 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCA-KB-5t4">
+                                <rect key="frame" x="227" y="44" width="136" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="To Homepage"/>
+                                <connections>
+                                    <action selector="toHome:" destination="dzz-7B-Wrv" eventType="touchUpInside" id="WcB-p9-F9e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZ7-6v-Vmm">
+                                <rect key="frame" x="32" y="44" width="96" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Undo"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="h14-OY-7wa"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
                         <outlet property="boardView" destination="Vdk-HA-KRa" id="AcH-If-61W"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toHomeHard" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="WvM-6W-nGh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H6o-Fi-38B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1836.9230769230769" y="1077.7251184834122"/>
+            <point key="canvasLocation" x="1836.9230769230769" y="1077.0142180094786"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="Zji-LY-7yL">
@@ -608,14 +659,17 @@
                     </view>
                     <connections>
                         <segue destination="JIj-08-eOj" kind="presentation" identifier="ToEasy" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="XRg-ig-WIu"/>
-                        <segue destination="IV0-UT-Ntn" kind="presentation" identifier="ToMed" modalTransitionStyle="coverVertical" id="yCp-ci-N7B"/>
+                        <segue destination="IV0-UT-Ntn" kind="presentation" identifier="ToMed" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="yCp-ci-N7B"/>
                         <segue destination="dzz-7B-Wrv" kind="presentation" identifier="ToHard" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="C6j-mx-wtW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ABY-LE-4EE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="RTi-lI-FfE" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="963.76811594202911" y="327.45535714285711"/>
+            <point key="canvasLocation" x="911" y="336"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="uVD-U4-8D5"/>
+    </inferredMetricsTieBreakers>
 </document>

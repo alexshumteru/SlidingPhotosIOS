@@ -11,14 +11,19 @@ class HardViewController: UIViewController {
 
     var images: [[UIImage]]?
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         boardView.passInImages(images: self.images!)
-        print(images!.count, images![0].count)
+        //print(images!.count, images![0].count)
         // Do any additional setup after loading the view.
     }
     @IBOutlet weak var boardView: BoardView!
 
+    
+    @IBAction func toHome(_ sender: Any) {
+        self.performSegue(withIdentifier: "toHomeHard", sender: self)
+    }
     
     @IBAction func tileSelected(_ sender: UIButton) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate

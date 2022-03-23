@@ -77,7 +77,8 @@ class BoardView: UIView {
                 let tile = board!.getTile(atRow: r, atCol: c)
                 if tile != (self.dimension! * self.dimension!) {
                     let button = self.viewWithTag(tile) as! UIButton
-                    button.setTitle(String(""), for: UIControl.State.normal)
+                    //button.setTitle(String(tile), for: UIControl.State.normal)
+                    button.setTitle("", for: UIControl.State.normal)
                     button.bounds = tileBounds
                     button.center = CGPoint(x: (CGFloat(c) + 0.5) * tileSize!,
                                             y: (CGFloat(r) + 0.5) * tileSize!)
@@ -85,20 +86,22 @@ class BoardView: UIView {
                     let y = (tile - 1) / self.dimension!
                     print(images!.count, images![0].count)
                     if (self.tag == 103){
-                        button.setImage(self.resizeImage(image: images![y][x], targetHeight: 128.0, targetWidth: 128.0), for: [])
+                        button.setImage(images![y][x].resizeImage(targetHeight: 128.0, targetWidth: 128.0), for: [])
                     } else if (self.tag == 104){
-                        button.setImage(self.resizeImage(image: images![y][x], targetHeight: 96.0, targetWidth: 96.0), for: [])
+                        button.setImage(images![y][x].resizeImage(targetHeight: 96.0, targetWidth: 96.0), for: [])
                     } else if (self.tag == 105){
-                        button.setImage(self.resizeImage(image: images![y][x], targetHeight: 76.0, targetWidth: 76.0), for: [])
+                        button.setImage(images![y][x].resizeImage(targetHeight: 76.0, targetWidth: 76.0), for: [])
                     }
                 }
             }
         }
     }
-    
-    fileprivate func resizeImage(image: UIImage, targetHeight: CGFloat, targetWidth: CGFloat) -> UIImage {
+}
+
+extension UIImage {
+    func resizeImage(targetHeight: CGFloat, targetWidth: CGFloat) -> UIImage {
         // Get current image size
-        let size = image.size
+        let size = self.size
 
         // Compute scaled, new size
         let heightRatio = targetHeight / size.height
@@ -108,12 +111,11 @@ class BoardView: UIView {
 
         // Create new image
         UIGraphicsBeginImageContextWithOptions(newSize, false, 0)
-        image.draw(in: rect)
+        self.draw(in: rect)
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
 
         // Return new image
         return newImage!
     }
-    
 }

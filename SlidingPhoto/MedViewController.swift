@@ -14,6 +14,10 @@ class MedViewController: UIViewController {
     
     @IBOutlet weak var boardView: BoardView!
     
+    @IBAction func toHome(_ sender: Any) {
+        self.performSegue(withIdentifier: "toHomeMed", sender: self)
+    }
+    
     @IBAction func tileSelected(_ sender: UIButton) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let board = appDelegate.midBoard
@@ -52,7 +56,7 @@ class MedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         boardView.passInImages(images: self.images!)
-        print(images!.count, images![0].count)
+        //print(images!.count, images![0].count)
         // Do any additional setup after loading the view.
         
     }
