@@ -21,6 +21,7 @@
 		FA62D2CE27D446F200450A24 /* MedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62D2CD27D446F200450A24 /* MedViewController.swift */; };
 		FA62D2D027D4470400450A24 /* HardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62D2CF27D4470400450A24 /* HardViewController.swift */; };
 		FA62D2D227E2E1C800450A24 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FA62D2D127E2E1C800450A24 /* .gitignore */; };
+		FAABD23427EB24A700529FFC /* TimerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAABD23327EB24A700529FFC /* TimerHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		FA62D2CD27D446F200450A24 /* MedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedViewController.swift; sourceTree = "<group>"; };
 		FA62D2CF27D4470400450A24 /* HardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardViewController.swift; sourceTree = "<group>"; };
 		FA62D2D127E2E1C800450A24 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		FAABD23327EB24A700529FFC /* TimerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				FA62D2B727D370D300450A24 /* ViewController.swift */,
 				FA62D2C927D386BB00450A24 /* SecondViewController.swift */,
 				FA62D2CB27D446D900450A24 /* EasyViewController.swift */,
+				FAABD23327EB24A700529FFC /* TimerHandler.swift */,
 				FA62D2CD27D446F200450A24 /* MedViewController.swift */,
 				FA62D2CF27D4470400450A24 /* HardViewController.swift */,
 				FA62D2C727D3711800450A24 /* ImageHandler.swift */,
@@ -170,6 +173,7 @@
 				FA62D2C827D3711800450A24 /* ImageHandler.swift in Sources */,
 				52901E5227E2D737001F39F0 /* Board.swift in Sources */,
 				FA62D2CA27D386BB00450A24 /* SecondViewController.swift in Sources */,
+				FAABD23427EB24A700529FFC /* TimerHandler.swift in Sources */,
 				FA62D2B627D370D300450A24 /* SceneDelegate.swift in Sources */,
 				52901E4A27E2B7B4001F39F0 /* BoardView.swift in Sources */,
 				FA62D2CE27D446F200450A24 /* MedViewController.swift in Sources */,

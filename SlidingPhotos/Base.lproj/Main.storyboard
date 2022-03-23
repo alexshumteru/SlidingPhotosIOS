@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="FirstViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="SlidingPhoto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="SlidingPhotos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -54,13 +54,13 @@
         <!--Easy View Controller-->
         <scene sceneID="1Ty-8Q-M9b">
             <objects>
-                <viewController storyboardIdentifier="EasyBoard" id="JIj-08-eOj" customClass="EasyViewController" customModule="SlidingPhoto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EasyBoard" id="JIj-08-eOj" customClass="EasyViewController" customModule="SlidingPhotos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wqx-sx-qVH">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view tag="103" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xMg-wo-p7j" customClass="BoardView" customModule="SlidingPhoto" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="134" width="390" height="422"/>
+                            <view tag="103" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xMg-wo-p7j" customClass="BoardView" customModule="SlidingPhotos" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="158" width="390" height="422"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xdc-ap-hgd">
@@ -139,13 +139,13 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSn-Rq-A7P">
-                                <rect key="frame" x="34" y="44" width="96" height="34"/>
+                                <rect key="frame" x="37" y="64" width="96" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Undo"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ge-fx-3aW">
-                                <rect key="frame" x="218" y="44" width="136" height="34"/>
+                                <rect key="frame" x="219" y="64" width="136" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="To Homepage"/>
@@ -153,12 +153,20 @@
                                     <action selector="toHome:" destination="JIj-08-eOj" eventType="touchUpInside" id="Rri-VJ-W7G"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QsG-iU-kd8">
+                                <rect key="frame" x="196" y="600" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CQS-2N-L6d"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
                         <outlet property="boardView" destination="xMg-wo-p7j" id="Syv-ai-5wn"/>
+                        <outlet property="timerLabel" destination="QsG-iU-kd8" id="hqK-NF-peW"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="toHomeEasy" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="uVD-U4-8D5"/>
                     </connections>
                 </viewController>
@@ -169,13 +177,28 @@
         <!--Med View Controller-->
         <scene sceneID="7Dg-kp-jR7">
             <objects>
-                <viewController storyboardIdentifier="MedBoard" id="IV0-UT-Ntn" customClass="MedViewController" customModule="SlidingPhoto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MedBoard" id="IV0-UT-Ntn" customClass="MedViewController" customModule="SlidingPhotos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W1T-BU-Yau">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view tag="104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fny-aG-4nP" customClass="BoardView" customModule="SlidingPhoto" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="134" width="390" height="422"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8C-gc-766">
+                                <rect key="frame" x="224" y="61" width="136" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="To Homepage"/>
+                                <connections>
+                                    <action selector="toHome:" destination="IV0-UT-Ntn" eventType="touchUpInside" id="Mpp-WR-JAe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzn-CK-O6l">
+                                <rect key="frame" x="37" y="61" width="96" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Undo"/>
+                            </button>
+                            <view tag="104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fny-aG-4nP" customClass="BoardView" customModule="SlidingPhotos" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="154" width="390" height="422"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZgT-g0-OqO">
@@ -316,21 +339,6 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8C-gc-766">
-                                <rect key="frame" x="224" y="44" width="136" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="To Homepage"/>
-                                <connections>
-                                    <action selector="toHome:" destination="IV0-UT-Ntn" eventType="touchUpInside" id="Mpp-WR-JAe"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzn-CK-O6l">
-                                <rect key="frame" x="36" y="44" width="96" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Undo"/>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GOg-wR-Kna"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -349,13 +357,28 @@
         <!--Hard View Controller-->
         <scene sceneID="v4J-TT-5zl">
             <objects>
-                <viewController storyboardIdentifier="HardBoard" id="dzz-7B-Wrv" customClass="HardViewController" customModule="SlidingPhoto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HardBoard" id="dzz-7B-Wrv" customClass="HardViewController" customModule="SlidingPhotos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D6f-vi-YHj">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view tag="105" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vdk-HA-KRa" customClass="BoardView" customModule="SlidingPhoto" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="134" width="390" height="422"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCA-KB-5t4">
+                                <rect key="frame" x="227" y="61" width="136" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="To Homepage"/>
+                                <connections>
+                                    <action selector="toHome:" destination="dzz-7B-Wrv" eventType="touchUpInside" id="WcB-p9-F9e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZ7-6v-Vmm">
+                                <rect key="frame" x="33" y="61" width="96" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Undo"/>
+                            </button>
+                            <view tag="105" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vdk-HA-KRa" customClass="BoardView" customModule="SlidingPhotos" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="172" width="390" height="422"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHv-Eh-0Gs">
@@ -579,21 +602,6 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCA-KB-5t4">
-                                <rect key="frame" x="227" y="44" width="136" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="To Homepage"/>
-                                <connections>
-                                    <action selector="toHome:" destination="dzz-7B-Wrv" eventType="touchUpInside" id="WcB-p9-F9e"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZ7-6v-Vmm">
-                                <rect key="frame" x="32" y="44" width="96" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Undo"/>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="h14-OY-7wa"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -610,7 +618,7 @@
         <!--Second View Controller-->
         <scene sceneID="Zji-LY-7yL">
             <objects>
-                <viewController storyboardIdentifier="SecondViewController" id="tFc-y8-p0Y" customClass="SecondViewController" customModule="SlidingPhoto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondViewController" id="tFc-y8-p0Y" customClass="SecondViewController" customModule="SlidingPhotos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aLo-6k-5wO">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -51,6 +51,7 @@ class HardViewController: UIViewController {
             if (board!.isSolved()) {
                 UIView.animate(withDuration: 0.5) { () -> Void in
                     self.view.window!.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
+                    self.showWonPopUp()
                 }
                 
                 UIView.animate(withDuration: 0.5, delay: 0.45, options: UIView.AnimationOptions.curveEaseIn, animations: { () -> Void in
@@ -58,6 +59,12 @@ class HardViewController: UIViewController {
                 }, completion: nil)
             }
         } // end if slide
+    }
+    func showWonPopUp(){
+        let alert = UIAlertController(title: "Congrats", message: "You Won", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Back to homepage", style: .default,
+                                      handler: {action in self.performSegue(withIdentifier: "toHomeHard", sender: self)}))
+        present(alert, animated: true)
     }
     
 }
