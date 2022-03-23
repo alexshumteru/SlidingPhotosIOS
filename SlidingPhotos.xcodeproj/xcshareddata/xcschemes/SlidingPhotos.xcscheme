@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FA62D2AF27D370D300450A24"
                BuildableName = "SlidingPhoto.app"
-               BlueprintName = "SlidingPhoto"
-               ReferencedContainer = "container:SlidingPhoto.xcodeproj">
+               BlueprintName = "SlidingPhotos"
+               ReferencedContainer = "container:SlidingPhotos.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,8 +46,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FA62D2AF27D370D300450A24"
             BuildableName = "SlidingPhoto.app"
-            BlueprintName = "SlidingPhoto"
-            ReferencedContainer = "container:SlidingPhoto.xcodeproj">
+            BlueprintName = "SlidingPhotos"
+            ReferencedContainer = "container:SlidingPhotos.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FA62D2AF27D370D300450A24"
             BuildableName = "SlidingPhoto.app"
-            BlueprintName = "SlidingPhoto"
-            ReferencedContainer = "container:SlidingPhoto.xcodeproj">
+            BlueprintName = "SlidingPhotos"
+            ReferencedContainer = "container:SlidingPhotos.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
