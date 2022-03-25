@@ -12,6 +12,7 @@ class BoardView: UIView {
     var images: [[UIImage]]?
     var dimension: Int?
     var board: Board?
+    var tileSize: CGFloat?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -45,31 +46,30 @@ class BoardView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         let appDelegate = UIApplication.shared.delegate! as! AppDelegate
-        var tileSize: CGFloat?
         var boardSquare: CGRect?
         // determine region to hold tiles (see below)
         if (self.tag == 103) {
             boardSquare = boardRect(dimInt: 3, dimFloat: 3.0)
             self.board = appDelegate.easyBoard
-            tileSize = (boardSquare!.width) / 3.0
+            self.tileSize = (boardSquare!.width) / 3.0
             self.dimension = 3
 
         }
         else if (self.tag == 104) {
             boardSquare = boardRect(dimInt: 4, dimFloat: 4.0)
             self.board = appDelegate.midBoard
-            tileSize = (boardSquare!.width) / 4.0
+            self.tileSize = (boardSquare!.width) / 4.0
             self.dimension = 4
         }
         else if (self.tag == 105) {
             boardSquare = boardRect(dimInt: 5, dimFloat: 5.0)
             self.board = appDelegate.hardBoard
-            tileSize = (boardSquare!.width) / 5.0
+            self.tileSize = (boardSquare!.width) / 5.0
             self.dimension = 5
 
         }
         
-        let tileBounds = CGRect(x: 0, y: 0, width: tileSize!, height: tileSize!)
+        let tileBounds = CGRect(x: 0, y: 0, width: self.tileSize!, height: self.tileSize!)
         
         for r in 0 ..< self.dimension! {
             for c in 0 ..< self.dimension! {
@@ -80,8 +80,8 @@ class BoardView: UIView {
                     //button.setTitle(String(tile), for: UIControl.State.normal)
                     button.setTitle("", for: UIControl.State.normal)
                     button.bounds = tileBounds
-                    button.center = CGPoint(x: (CGFloat(c) + 0.5) * tileSize!,
-                                            y: (CGFloat(r) + 0.5) * tileSize!)
+                    button.center = CGPoint(x: (CGFloat(c) + 0.5) * self.tileSize!,
+                                            y: (CGFloat(r) + 0.5) * self.tileSize!)
                     let x = (tile - 1) % self.dimension!
                     let y = (tile - 1) / self.dimension!
                     print(images!.count, images![0].count)
@@ -96,6 +96,38 @@ class BoardView: UIView {
             }
         }
     }
+    
+    func addLastTile() {
+//        var lastTile = images![self.dimension!-1][self.dimension!-1]
+//        if (self.tag == 103){
+//            lastTile = lastTile.resizeImage(targetHeight: 128.0, targetWidth: 128.0)
+//        } else if (self.tag == 104){
+//            lastTile = lastTile.resizeImage(targetHeight: 96.0, targetWidth: 96.0)
+//        } else if (self.tag == 105){
+//            lastTile = lastTile.resizeImage(targetHeight: 76.0, targetWidth: 76.0)
+//        }
+//        let imageView = UIImageView(image: lastTile)
+//        imageView.frame = CGRect(x: 0, y: 0, width: tileSize!, height: tileSize!)
+//        imageView.center = CGPoint(x: (CGFloat(self.dimension! - 1) + 0.5) * self.tileSize!,
+//                                   y: (CGFloat(self.dimension! - 1) + 0.5) * self.tileSize!)
+//        super.addSubview(imageView)
+//        super.bringSubviewToFront(imageView)
+        let lastTile = UIButton()
+        lastTile.setTitle("", for: UIControl.State.normal)
+        let tileBounds = CGRect(x: 0, y: 0, width: tileSize!, height: tileSize!)
+        lastTile.bounds = tileBounds
+        lastTile.center = CGPoint(x: (CGFloat(self.dimension! - 1) + 0.5) * self.tileSize!,
+                                  y: (CGFloat(self.dimension! - 1) + 0.5) * self.tileSize!)
+        if (self.tag == 103){
+            lastTile.setImage(images![2][2].resizeImage(targetHeight: 128.0, targetWidth: 128.0), for: [])
+        } else if (self.tag == 104){
+            lastTile.setImage(images![3][3].resizeImage(targetHeight: 96.0, targetWidth: 96.0), for: [])
+        } else if (self.tag == 105){
+            lastTile.setImage(images![4][4].resizeImage(targetHeight: 76.0, targetWidth: 76.0), for: [])
+        }
+        super.addSubview(lastTile)
+    }
+    
 }
 
 extension UIImage {

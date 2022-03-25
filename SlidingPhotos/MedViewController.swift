@@ -44,6 +44,7 @@ class MedViewController: UIViewController {
             if (board!.isSolved()) {
                 UIView.animate(withDuration: 0.5) { () -> Void in
                     self.view.window!.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
+                    self.boardView.addLastTile()
                     self.showWonPopUp()
                 }
                 
