@@ -31,7 +31,14 @@ class EasyViewController: UIViewController {
             return
         }
         print("test move:", move)
-        
+        let pathToSound = Bundle.main.path(forResource: "Reverse-pop", ofType: "mp3")!
+        let url = URL(fileURLWithPath: pathToSound)
+        do {
+            audio = try AVAudioPlayer(contentsOf: url)
+            audio!.play()
+        } catch{
+            print(error)
+        }
         let pos = board!.undo(move: move)
         let tag = board!.boardState[pos[0]][pos[1]]
         let sender = boardView.viewWithTag(tag) as! UIButton
