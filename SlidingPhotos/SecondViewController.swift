@@ -37,7 +37,7 @@ class SecondViewController: UIViewController {
         //print(imageArr[0][0], imageArr[4][4])
         self.performSegue(withIdentifier: "ToHard", sender: self)
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let board = appDelegate.easyBoard
+        let board = appDelegate.hardBoard
         board!.scramble(numSwap: 200)
         board!.moveMade.removeAll()
     }
