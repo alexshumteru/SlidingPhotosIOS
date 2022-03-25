@@ -100,8 +100,7 @@ class MedViewController: UIViewController {
     
     func noMoreUndoPopUp() {
         let alert = UIAlertController(title: "No more undos left", message: "No more undos left", preferredStyle: .alert)
-//        alert.addAction(UIAlertAction(title: "Ok", style: .default,
-//                                      handler: {action in print("")})
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         present(alert, animated: true)
     }
     
