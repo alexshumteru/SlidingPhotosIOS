@@ -67,5 +67,8 @@ class HardViewController: UIViewController {
                                       handler: {action in self.performSegue(withIdentifier: "toHomeHard", sender: self)}))
         present(alert, animated: true)
     }
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+             return .portrait
+     }
     
 }

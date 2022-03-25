@@ -45,4 +45,7 @@ class SecondViewController: UIViewController {
             destinationVC.images = splitImages
         }
     }
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+             return .portrait
+     }
 }

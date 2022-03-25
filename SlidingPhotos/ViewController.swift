@@ -46,6 +46,9 @@ class ViewController: UIViewController {
             self.performSegue(withIdentifier: "Segue1", sender: self)
         }
     }
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+             return .portrait
+     }
 
 }
 
