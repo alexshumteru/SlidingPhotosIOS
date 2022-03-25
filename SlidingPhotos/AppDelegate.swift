@@ -18,11 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         self.easyBoard = Board(dim: 3)
-        self.easyBoard!.scramble(numSwap: 200)
         self.midBoard = Board(dim: 4)
-        self.midBoard!.scramble(numSwap: 200)
         self.hardBoard = Board(dim: 5)
-        self.hardBoard!.scramble(numSwap: 200)
 
         return true
     }

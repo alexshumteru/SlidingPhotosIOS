@@ -54,10 +54,54 @@ class MedViewController: UIViewController {
             }
         } // end if slide
     }
+    
+    @IBAction func executeUndo(_ sender: Any) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let board = appDelegate.midBoard
+        let move = board!.getLastMove()
+        
+        if move == "N/A" {
+            noMoreUndoPopUp()
+            return
+        }
+        print("test move:", move)
+        
+        let pos = board!.undo(move: move)
+        let tag = board!.boardState[pos[0]][pos[1]]
+        let sender = boardView.viewWithTag(tag) as! UIButton
+        let buttonBounds = sender.bounds
+        var buttonCenter = sender.center
+
+        if move == "UP" {
+            buttonCenter.y -= buttonBounds.size.height
+        } else if move == "DOWN" {
+            buttonCenter.y += buttonBounds.size.height
+        } else if move == "LEFT" {
+            buttonCenter.x -= buttonBounds.size.width
+        } else if move == "RIGHT" {
+            buttonCenter.x += buttonBounds.size.width
+        }
+
+        
+        
+        UIView.animate(withDuration: 0.5, delay: 0, options: [], animations: {sender.center = buttonCenter})
+        
+    }
+    
+    
     func showWonPopUp(){
         let alert = UIAlertController(title: "Congrats", message: "You Won", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Back to homepage", style: .default,
                                       handler: {action in self.performSegue(withIdentifier: "toHomeMed", sender: self)}))
+        present(alert, animated: true)
+    }
+    
+    
+    
+    func noMoreUndoPopUp() {
+        let alert = UIAlertController(title: "No more undos left", message: "No more undos left", preferredStyle: .alert)
+//        alert.addAction(UIAlertAction(title: "Ok", style: .default,
+//                                      handler: {action in print("")})
         present(alert, animated: true)
     }
     

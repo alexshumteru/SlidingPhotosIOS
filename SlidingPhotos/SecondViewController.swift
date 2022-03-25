@@ -17,17 +17,29 @@ class SecondViewController: UIViewController {
     
     @IBAction func easyBtn(_ sender: Any) {
         self.performSegue(withIdentifier: "ToEasy", sender: self)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let board = appDelegate.easyBoard
+        board!.scramble(numSwap: 200)
+        board!.moveMade.removeAll()
     }
 
     @IBAction func midBtn(_ sender: Any) {
         //print(imageArr[0][0], imageArr[3][3])
         self.performSegue(withIdentifier: "ToMed", sender: self)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let board = appDelegate.midBoard
+        board!.scramble(numSwap: 200)
+        board!.moveMade.removeAll()
     }
 
     @IBAction func hardBtn(_ sender: Any) {
         
         //print(imageArr[0][0], imageArr[4][4])
         self.performSegue(withIdentifier: "ToHard", sender: self)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let board = appDelegate.easyBoard
+        board!.scramble(numSwap: 200)
+        board!.moveMade.removeAll()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

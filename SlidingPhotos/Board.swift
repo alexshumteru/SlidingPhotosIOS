@@ -13,6 +13,10 @@ class Board {
     var cols : Int;
     var boardState : [[Int]]
     var empty : Int;
+    var moveMade : [String]
+    var undoDict : [String: String]
+    
+    
     
     init(dim : Int){
         
@@ -29,6 +33,14 @@ class Board {
                 // 16 is empty for our case
             }
         }
+        
+        moveMade = []
+        undoDict = [
+            "LEFT": "RIGHT",
+            "RIGHT": "LEFT",
+            "UP": "DOWN",
+            "DOWN": "UP"
+        ]
     }
     
     func findEmpty() -> [Int]{
@@ -84,20 +96,30 @@ class Board {
             return
         }
         if (res == "LEFT") {
+            moveMade.append("LEFT")
             swapTiles(fromRow: r, fromCol: c, toRow: r, toCol: c-1)
 
         }
         if (res == "RIGHT") {
+            moveMade.append("RIGHT")
             swapTiles(fromRow: r, fromCol: c, toRow: r, toCol: c+1)
 
         }
         if (res == "UP") {
+            moveMade.append("UP")
             swapTiles(fromRow: r, fromCol: c, toRow: r-1, toCol: c)
         }
         if (res == "DOWN") {
+            moveMade.append("DOWN")
             swapTiles(fromRow: r, fromCol: c, toRow: r+1, toCol: c)
         }
+        limitMoveMadeCount()
+    }
     
+    func limitMoveMadeCount() {
+        if moveMade.count > 10 {
+            moveMade.removeFirst()
+        }
     }
     
     func possibleSlidePosition(atRow r: Int, atCol c: Int) -> String {
@@ -159,5 +181,45 @@ class Board {
                 self.boardState[r][c] = (d * r) + c + 1
             }
         }
+    }
+    
+    func getLastMove() -> String {
+        if moveMade.count > 0 {
+            let undoMove = moveMade.popLast()!
+            return undoDict[undoMove]!
+        } else {
+            return "N/A"
+        }
+        
+    }
+    
+    func undo(move: String) -> [Int] {
+        print("pre:", boardState)
+
+        
+        let emptyTile = findEmpty()
+        print(emptyTile)
+        if (move == "LEFT") {
+            print("1")
+            swapTiles(fromRow: emptyTile[0], fromCol: emptyTile[1]+1, toRow: emptyTile[0], toCol: emptyTile[1])
+        }
+        
+        if (move == "RIGHT") {
+            print("2")
+            swapTiles(fromRow: emptyTile[0], fromCol: emptyTile[1]-1, toRow: emptyTile[0], toCol: emptyTile[1])
+        }
+        
+        if (move == "UP") {
+            print("3")
+            swapTiles(fromRow: emptyTile[0]+1, fromCol: emptyTile[1], toRow: emptyTile[0], toCol: emptyTile[1])
+        }
+        
+        if (move == "DOWN") {
+            swapTiles(fromRow: emptyTile[0]-1, fromCol: emptyTile[1], toRow: emptyTile[0], toCol: emptyTile[1])
+        }
+        print("post:", boardState)
+        
+        return emptyTile //emptyTile is not empty anymore, it contains the tile moved
+        
     }
 }
