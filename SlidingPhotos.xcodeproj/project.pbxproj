@@ -21,6 +21,7 @@
 		FA62D2CE27D446F200450A24 /* MedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62D2CD27D446F200450A24 /* MedViewController.swift */; };
 		FA62D2D027D4470400450A24 /* HardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62D2CF27D4470400450A24 /* HardViewController.swift */; };
 		FA62D2D227E2E1C800450A24 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FA62D2D127E2E1C800450A24 /* .gitignore */; };
+		FA6DF39627ED9CB600FE24D0 /* Pop-sound-effect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA6DF39527ED9CB600FE24D0 /* Pop-sound-effect.mp3 */; };
 		FAABD23427EB24A700529FFC /* TimerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAABD23327EB24A700529FFC /* TimerHandler.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		FA62D2CD27D446F200450A24 /* MedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedViewController.swift; sourceTree = "<group>"; };
 		FA62D2CF27D4470400450A24 /* HardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardViewController.swift; sourceTree = "<group>"; };
 		FA62D2D127E2E1C800450A24 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		FA6DF39527ED9CB600FE24D0 /* Pop-sound-effect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Pop-sound-effect.mp3"; path = "../../../../sounds/Pop-sound-effect.mp3"; sourceTree = "<group>"; };
 		FAABD23327EB24A700529FFC /* TimerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +77,7 @@
 		FA62D2B227D370D300450A24 /* SlidingPhotos */ = {
 			isa = PBXGroup;
 			children = (
+				FA6DF39227ED9C6400FE24D0 /* Sound */,
 				FA62D2B327D370D300450A24 /* AppDelegate.swift */,
 				FA62D2B527D370D300450A24 /* SceneDelegate.swift */,
 				FA62D2B727D370D300450A24 /* ViewController.swift */,
@@ -92,6 +95,14 @@
 				52901E5127E2D737001F39F0 /* Board.swift */,
 			);
 			path = SlidingPhotos;
+			sourceTree = "<group>";
+		};
+		FA6DF39227ED9C6400FE24D0 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				FA6DF39527ED9CB600FE24D0 /* Pop-sound-effect.mp3 */,
+			);
+			path = Sound;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +165,7 @@
 			files = (
 				FA62D2D227E2E1C800450A24 /* .gitignore in Resources */,
 				FA62D2C027D370D400450A24 /* LaunchScreen.storyboard in Resources */,
+				FA6DF39627ED9CB600FE24D0 /* Pop-sound-effect.mp3 in Resources */,
 				FA62D2BD27D370D400450A24 /* Assets.xcassets in Resources */,
 				FA62D2BB27D370D300450A24 /* Main.storyboard in Resources */,
 			);

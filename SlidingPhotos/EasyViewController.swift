@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class EasyViewController: UIViewController {
 
@@ -14,6 +15,8 @@ class EasyViewController: UIViewController {
     @IBOutlet weak var timerLabel: UILabel!
     
     @IBOutlet weak var boardView: BoardView!
+    
+    var audio: AVAudioPlayer?
     
     //var timer:Timer = Timer()
     //var count:Int = 0
@@ -53,6 +56,14 @@ class EasyViewController: UIViewController {
         self.performSegue(withIdentifier: "toHomeEasy", sender: self)
     }
     @IBAction func tileSelected(_ sender: UIButton) {
+        let pathToSound = Bundle.main.path(forResource: "Pop-sound-effect", ofType: "mp3")!
+        let url = URL(fileURLWithPath: pathToSound)
+        do {
+            audio = try AVAudioPlayer(contentsOf: url)
+            audio!.play()
+        } catch{
+            print(error)
+        }
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let board = appDelegate.easyBoard
         let pos = board!.getRowAndColumn(forTile: sender.tag)
