@@ -16,6 +16,8 @@ class HardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        boardView.center = CGPoint(x: self.view.frame.size.width/2,
+                                   y: self.view.frame.size.height/2)
         boardView.passInImages(images: self.images!)
         //print(images!.count, images![0].count)
         // Do any additional setup after loading the view.
