@@ -43,7 +43,7 @@
 		FA62D2CD27D446F200450A24 /* MedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedViewController.swift; sourceTree = "<group>"; };
 		FA62D2CF27D4470400450A24 /* HardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardViewController.swift; sourceTree = "<group>"; };
 		FA62D2D127E2E1C800450A24 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		FA6DF39527ED9CB600FE24D0 /* Pop-sound-effect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Pop-sound-effect.mp3"; path = "../../../../sounds/Pop-sound-effect.mp3"; sourceTree = "<group>"; };
+		FA6DF39527ED9CB600FE24D0 /* Pop-sound-effect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Pop-sound-effect.mp3"; sourceTree = "<group>"; };
 		FA6DF39727ED9F8E00FE24D0 /* Reverse-pop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Reverse-pop.mp3"; sourceTree = "<group>"; };
 		FAABD23327EB24A700529FFC /* TimerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
