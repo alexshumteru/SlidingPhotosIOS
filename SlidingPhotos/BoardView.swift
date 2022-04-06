@@ -13,6 +13,7 @@ class BoardView: UIView {
     var dimension: Int?
     var board: Board?
     var tileSize: CGFloat?
+    var minDim: CGFloat?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,6 +26,10 @@ class BoardView: UIView {
     
     func passInImages(images: [[UIImage]]){
         self.images = images
+    }
+    
+    func passInMinDim(minDim: CGFloat){
+        self.minDim = minDim;
     }
     
     func boardRect(dimInt : Int, dimFloat : CGFloat) -> CGRect { // get square for holding 4x4 tiles buttons
@@ -86,11 +91,11 @@ class BoardView: UIView {
                     let y = (tile - 1) / self.dimension!
                     print(images!.count, images![0].count)
                     if (self.tag == 103){
-                        button.setImage(images![y][x].resizeImage(targetHeight: 128.0, targetWidth: 128.0), for: [])
+                        button.setImage(images![y][x].resizeImage(targetHeight: self.minDim! * 0.328, targetWidth: self.minDim! * 0.328), for: [])
                     } else if (self.tag == 104){
-                        button.setImage(images![y][x].resizeImage(targetHeight: 96.0, targetWidth: 96.0), for: [])
+                        button.setImage(images![y][x].resizeImage(targetHeight: self.minDim! * 0.247, targetWidth: self.minDim! * 0.247), for: [])
                     } else if (self.tag == 105){
-                        button.setImage(images![y][x].resizeImage(targetHeight: 76.0, targetWidth: 76.0), for: [])
+                        button.setImage(images![y][x].resizeImage(targetHeight: self.minDim! * 0.196, targetWidth: self.minDim! * 0.196), for: [])
                     }
                 }
             }
@@ -119,11 +124,11 @@ class BoardView: UIView {
         lastTile.center = CGPoint(x: (CGFloat(self.dimension! - 1) + 0.5) * self.tileSize!,
                                   y: (CGFloat(self.dimension! - 1) + 0.5) * self.tileSize!)
         if (self.tag == 103){
-            lastTile.setImage(images![2][2].resizeImage(targetHeight: 128.0, targetWidth: 128.0), for: [])
+            lastTile.setImage(images![2][2].resizeImage(targetHeight: self.minDim! * 0.328, targetWidth: self.minDim! * 0.328), for: [])
         } else if (self.tag == 104){
-            lastTile.setImage(images![3][3].resizeImage(targetHeight: 96.0, targetWidth: 96.0), for: [])
+            lastTile.setImage(images![3][3].resizeImage(targetHeight: self.minDim! * 0.247, targetWidth: self.minDim! * 0.247), for: [])
         } else if (self.tag == 105){
-            lastTile.setImage(images![4][4].resizeImage(targetHeight: 76.0, targetWidth: 76.0), for: [])
+            lastTile.setImage(images![4][4].resizeImage(targetHeight: self.minDim! * 0.196, targetWidth: self.minDim! * 0.196), for: [])
         }
         super.addSubview(lastTile)
     }
