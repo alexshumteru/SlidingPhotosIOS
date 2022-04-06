@@ -23,3 +23,8 @@ Once the puzzle is solved and the puzzles are assembled in a way to look identic
   <img src="assets/sliding_photos_3.jpg" width="200" height="400">
   <img src="assets/sliding_photos_2.jpg" width="200" height="400">
 </h3>
+
+## Technical details
+- The picture was divided and was layed on the buttons.
+- The number of buttons were varied according to the view controller, all of them were hard generated.
+- Undo was done using stack, each move was stored upto 10 moves and popped each time undo button was pressed
