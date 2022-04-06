@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -150,8 +150,9 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ge-fx-3aW">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ge-fx-3aW">
                                 <rect key="frame" x="241" y="64" width="114" height="31"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="To Homepage"/>
                                 <connections>
@@ -165,8 +166,9 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSn-Rq-A7P">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSn-Rq-A7P">
                                 <rect key="frame" x="40" y="64" width="59" height="31"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Undo"/>
                                 <connections>
@@ -176,16 +178,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CQS-2N-L6d"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="gSn-Rq-A7P" firstAttribute="top" secondItem="CQS-2N-L6d" secondAttribute="top" constant="20" id="C9m-dn-5zz"/>
-                            <constraint firstItem="CQS-2N-L6d" firstAttribute="trailing" secondItem="6Ge-fx-3aW" secondAttribute="trailing" constant="35" id="YcL-CF-VCP"/>
-                            <constraint firstItem="gSn-Rq-A7P" firstAttribute="leading" secondItem="CQS-2N-L6d" secondAttribute="leading" constant="40" id="nQb-YG-6Jz"/>
-                            <constraint firstItem="6Ge-fx-3aW" firstAttribute="top" secondItem="CQS-2N-L6d" secondAttribute="top" constant="20" id="ukM-hg-s6Q"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="boardView" destination="xMg-wo-p7j" id="Syv-ai-5wn"/>
                         <outlet property="timerLabel" destination="QsG-iU-kd8" id="hqK-NF-peW"/>
+                        <outlet property="toHomePage" destination="6Ge-fx-3aW" id="WlD-VV-aDi"/>
+                        <outlet property="undo" destination="gSn-Rq-A7P" id="aBv-EF-C1I"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="toHomeEasy" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="uVD-U4-8D5"/>
                     </connections>
                 </viewController>
@@ -201,16 +199,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8C-gc-766">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8C-gc-766">
                                 <rect key="frame" x="246" y="61" width="114" height="31"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="To Homepage"/>
                                 <connections>
                                     <action selector="toHome:" destination="IV0-UT-Ntn" eventType="touchUpInside" id="Mpp-WR-JAe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzn-CK-O6l">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzn-CK-O6l">
                                 <rect key="frame" x="37" y="61" width="59" height="31"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Undo"/>
                                 <connections>
@@ -362,17 +362,13 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GOg-wR-Kna"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="uzn-CK-O6l" firstAttribute="leading" secondItem="GOg-wR-Kna" secondAttribute="leading" constant="37" id="XJz-lR-SBo"/>
-                            <constraint firstItem="f8C-gc-766" firstAttribute="top" secondItem="GOg-wR-Kna" secondAttribute="top" constant="17" id="nCt-UY-ncI"/>
-                            <constraint firstItem="GOg-wR-Kna" firstAttribute="trailing" secondItem="f8C-gc-766" secondAttribute="trailing" constant="30" id="y46-Cq-cDo"/>
-                            <constraint firstItem="uzn-CK-O6l" firstAttribute="top" secondItem="GOg-wR-Kna" secondAttribute="top" constant="17" id="ybg-2U-zKW"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OyZ-sL-NAi"/>
                     <value key="contentSizeForViewInPopover" type="size" width="390" height="844"/>
                     <connections>
                         <outlet property="boardView" destination="Fny-aG-4nP" id="1eD-U3-MEh"/>
+                        <outlet property="toHomePage" destination="f8C-gc-766" id="gQG-Pc-Uen"/>
+                        <outlet property="undo" destination="uzn-CK-O6l" id="civ-5B-aQK"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="toHomeMed" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="3E9-oB-ea3"/>
                     </connections>
                 </viewController>
@@ -388,8 +384,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCA-KB-5t4">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCA-KB-5t4">
                                 <rect key="frame" x="249" y="61" width="114" height="31"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="To Homepage"/>
                                 <connections>
@@ -621,8 +618,9 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZ7-6v-Vmm">
-                                <rect key="frame" x="33" y="61" width="59" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZ7-6v-Vmm">
+                                <rect key="frame" x="38" y="61" width="59" height="31"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Undo"/>
                                 <connections>
@@ -632,15 +630,11 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="h14-OY-7wa"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="h14-OY-7wa" firstAttribute="trailing" secondItem="cCA-KB-5t4" secondAttribute="trailing" constant="27" id="F9l-7l-rdm"/>
-                            <constraint firstItem="aZ7-6v-Vmm" firstAttribute="leading" secondItem="h14-OY-7wa" secondAttribute="leading" constant="33" id="KCW-p6-ZHy"/>
-                            <constraint firstItem="cCA-KB-5t4" firstAttribute="top" secondItem="h14-OY-7wa" secondAttribute="top" constant="17" id="RyW-bD-crr"/>
-                            <constraint firstItem="aZ7-6v-Vmm" firstAttribute="top" secondItem="h14-OY-7wa" secondAttribute="top" constant="17" id="rn6-mG-0MM"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="boardView" destination="Vdk-HA-KRa" id="AcH-If-61W"/>
+                        <outlet property="toHomePage" destination="cCA-KB-5t4" id="LtY-6C-YLI"/>
+                        <outlet property="undo" destination="aZ7-6v-Vmm" id="idF-yD-enN"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="toHomeHard" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="WvM-6W-nGh"/>
                     </connections>
                 </viewController>
@@ -721,6 +715,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="WvM-6W-nGh"/>
+        <segue reference="uVD-U4-8D5"/>
     </inferredMetricsTieBreakers>
 </document>
