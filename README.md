@@ -10,8 +10,10 @@ Once the puzzle is solved and the puzzles are assembled in a way to look identic
 
 ## Features
 - One distinguishing feature of this game over other sliding tiles game is that any picture can be uploaded from one's album
-- The game is divided into easy, medium, and hard level of difficulties
-<img src="assets/sliding_photos_4.jpg" width="200" height="400">
+- The game is divided into easy, medium, and hard level of difficulties as shown: <img src="assets/sliding_photos_4.jpg" width="200" height="400">
+
+
+
 - Easy difficulty divides the picture chosen into a 3 by 3 board by dividing the picture into 9 parts and make one of them empty.
 - Medium difficulty divides the picture chosen into a 4 by 4 board by dividing the picture into 16 parts and make one of them empty.
 - Hard difficulty divides the picture chosen into 5 by 5 board by dividing the picture into 25 parts and make one of them empty.
