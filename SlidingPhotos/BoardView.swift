@@ -91,11 +91,11 @@ class BoardView: UIView {
                     let y = (tile - 1) / self.dimension!
                     print(images!.count, images![0].count)
                     if (self.tag == 103){
-                        button.setImage(images![y][x].resizeImage(targetHeight: self.minDim! * 0.328, targetWidth: self.minDim! * 0.328), for: [])
+                        button.setImage(images![y][x].resizeImage(targetHeight: self.minDim! * 0.327, targetWidth: self.minDim! * 0.327), for: [])
                     } else if (self.tag == 104){
-                        button.setImage(images![y][x].resizeImage(targetHeight: self.minDim! * 0.247, targetWidth: self.minDim! * 0.247), for: [])
+                        button.setImage(images![y][x].resizeImage(targetHeight: self.minDim! * 0.246, targetWidth: self.minDim! * 0.246), for: [])
                     } else if (self.tag == 105){
-                        button.setImage(images![y][x].resizeImage(targetHeight: self.minDim! * 0.196, targetWidth: self.minDim! * 0.196), for: [])
+                        button.setImage(images![y][x].resizeImage(targetHeight: self.minDim! * 0.195, targetWidth: self.minDim! * 0.195), for: [])
                     }
                 }
             }

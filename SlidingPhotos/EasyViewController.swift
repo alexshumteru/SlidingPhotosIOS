@@ -133,7 +133,7 @@ class EasyViewController: UIViewController {
                               y: self.view.frame.size.height/10)
         boardView.passInImages(images: self.images!)
         let minDim = [UIScreen.main.bounds.width, UIScreen.main.bounds.height].min();
-        boardView.passInMinDim(minDim: minDim);
+        boardView.passInMinDim(minDim: minDim!);
         //print(images!.count, images![0].count)
         
         // Do any additional setup after loading the view.
