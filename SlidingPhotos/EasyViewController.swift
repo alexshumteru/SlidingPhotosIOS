@@ -15,6 +15,8 @@ class EasyViewController: UIViewController {
     @IBOutlet weak var timerLabel: UILabel!
     
     @IBOutlet weak var boardView: BoardView!
+    @IBOutlet weak var toHomePage: UIButton!
+    @IBOutlet weak var undo: UIButton!
     
     var audio: AVAudioPlayer?
     
@@ -125,6 +127,10 @@ class EasyViewController: UIViewController {
         super.viewDidLoad()
         boardView.center = CGPoint(x: self.view.frame.size.width/2,
                                    y: self.view.frame.size.height/2)
+        toHomePage.center = CGPoint(x: (self.view.frame.size.width)*(2/3),
+                                    y: self.view.frame.size.height/10)
+        undo.center = CGPoint(x: self.view.frame.size.width/4,
+                              y: self.view.frame.size.height/10)
         boardView.passInImages(images: self.images!)
         let minDim = [UIScreen.main.bounds.width, UIScreen.main.bounds.height].min();
         boardView.passInMinDim(minDim: minDim);

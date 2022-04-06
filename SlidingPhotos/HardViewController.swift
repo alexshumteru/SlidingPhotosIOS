@@ -14,18 +14,27 @@ class HardViewController: UIViewController {
     var audio: AVAudioPlayer?
     
     
+
+    
+    @IBOutlet weak var boardView: BoardView!
+    @IBOutlet weak var undo: UIButton!
+    @IBOutlet weak var toHomePage: UIButton!
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         boardView.center = CGPoint(x: self.view.frame.size.width/2,
                                    y: self.view.frame.size.height/2)
+        toHomePage.center = CGPoint(x: (self.view.frame.size.width)*(2/3),
+                                    y: self.view.frame.size.height/10)
+        undo.center = CGPoint(x: self.view.frame.size.width/4,
+                              y: self.view.frame.size.height/10)
         boardView.passInImages(images: self.images!)
         let minDim = [UIScreen.main.bounds.width, UIScreen.main.bounds.height].min();
         boardView.passInMinDim(minDim: minDim);
         //print(images!.count, images![0].count)
         // Do any additional setup after loading the view.
     }
-    @IBOutlet weak var boardView: BoardView!
-
     
     @IBAction func toHome(_ sender: Any) {
         self.performSegue(withIdentifier: "toHomeHard", sender: self)
