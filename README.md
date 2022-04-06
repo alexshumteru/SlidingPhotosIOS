@@ -17,3 +17,7 @@ Once the puzzle is solved and the puzzles are assembled in a way to look identic
 
 ## Examples
 
+<h3 align="center">
+  <img src="assets/sliding_photos_1.jpg" width="200" height="400">
+  <img src="assets/sliding_photos_3.jpg" width="200" height="400">
+</h3>
