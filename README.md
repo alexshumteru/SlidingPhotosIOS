@@ -14,7 +14,7 @@ Once the puzzle is solved and the puzzles are assembled in a way to look identic
 - Easy difficulty divides the picture chosen into a 3 by 3 board by dividing the picture into 9 parts and make one of them empty.
 - Medium difficulty divides the picture chosen into a 4 by 4 board by dividing the picture into 16 parts and make one of them empty.
 - Hard difficulty divides the picture chosen into 5 by 5 board by dividing the picture into 25 parts and make one of them empty.
-- It also supports undo so that any move one makes in the game, he/she can revert that mistake.
+- It also supports undo so that for any move one makes in the game, he/she can revert that mistake.
 
 ## Examples
 
